@@ -9,7 +9,7 @@ function App() {
   const [userName, setUserName] = useState(undefined);
 
   const getUserName = () => {
-    return fetch('http://localhost:9999/userinfo', { credentials: "include"})
+    return fetch('https://todo-frontend-ns.herokuapp.com/userinfo', { credentials: "include"})
     .then(r => {
       if(r.ok) {
         return r.json();
@@ -32,14 +32,14 @@ function App() {
 
 
   const signupHandler = (username, password) => {
-    loginOrSignup('http://localhost:9999/signup', username, password);
+    loginOrSignup('https://todo-frontend-ns.herokuapp.com/signup', username, password);
   };
   const loginHandler = (username, password) => {
-    loginOrSignup('http://localhost:9999/login', username, password);
+    loginOrSignup('https://todo-frontend-ns.herokuapp.com/login', username, password);
   };
 
   const logoutHandler = () => {
-    return fetch('http://localhost:9999/logout', { credentials: 'include'})
+    return fetch('https://todo-frontend-ns.herokuapp.com/logout', { credentials: 'include'})
     .then(r => {
       if(r.ok) {
         setLoggedIn(false);
