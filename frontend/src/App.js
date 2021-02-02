@@ -26,9 +26,9 @@ function App() {
     });
   }
 
-  useEffect(() => {
-    getUserName();
-  }, []);
+  // useEffect(() => {
+  //   getUserName();
+  // }, []);
 
 
   const signupHandler = (username, password) => {
